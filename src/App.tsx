@@ -26,32 +26,87 @@ import { BUSINESS_INFO, KEYWORDS } from './constants';
 // --- Schema Markup ---
 const schemaMarkup = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": BUSINESS_INFO.name,
-  "image": "https://picsum.photos/seed/junkcar/800/600",
-  "telephone": BUSINESS_INFO.phone,
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San Antonio",
-    "addressRegion": "TX",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 29.4241,
-    "longitude": -98.4936
-  },
-  "url": "https://superdavejunkcars.com",
-  "priceRange": "$$",
-  "areaServed": BUSINESS_INFO.serviceAreas.map(city => ({
-    "@type": "City",
-    "name": city
-  })),
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": BUSINESS_INFO.rating.toString(),
-    "reviewCount": BUSINESS_INFO.reviewCount.toString()
-  }
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://super-dave-buys-junk-cars.vercel.app/#business",
+      "name": "Super Dave Buys Junk Cars",
+      "image": "https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png",
+      "url": "https://super-dave-buys-junk-cars.vercel.app/",
+      "telephone": "+1-210-994-2827",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Antonio",
+        "addressRegion": "TX",
+        "postalCode": "78201",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "San Antonio TX",
+        "Converse TX",
+        "Universal City TX",
+        "Schertz TX",
+        "New Braunfels TX"
+      ],
+      "openingHours": "Mo-Su 00:00-23:59",
+      "sameAs": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "4"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Cash for Junk Cars",
+      "provider": {
+        "@id": "https://super-dave-buys-junk-cars.vercel.app/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "San Antonio TX"
+      },
+      "description": "We buy junk cars in San Antonio and surrounding areas. Get fast cash offers, free towing, and same-day pickup."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much can I get for my junk car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The value depends on the vehicle condition, make, and model. Call us for a fast, free quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free towing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide 100% free towing anywhere in San Antonio and nearby areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I sell a car without a title?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many cases yes. Contact us and we’ll guide you through the process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you pick up my car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer same-day or next-day pickup in most cases."
+          }
+        }
+      ]
+    }
+  ]
 };
 
 export default function App() {
