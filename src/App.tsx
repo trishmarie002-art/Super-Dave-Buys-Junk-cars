@@ -184,7 +184,7 @@ export default function App() {
         <main className="flex-grow bg-[#f4f4f4]">
           {/* --- New Rotating Hero --- */}
           <section 
-            className="relative h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden"
+            className="relative min-h-[650px] md:h-[650px] flex items-center justify-center overflow-hidden pt-24 md:pt-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -220,7 +220,7 @@ export default function App() {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="h-24 md:h-40 w-auto mb-8 drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]"
+                  className="h-20 md:h-40 w-auto mb-6 md:mb-8 drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]"
                 />
                 <h1 className="text-4xl md:text-7xl font-black uppercase leading-tight mb-6 drop-shadow-2xl">
                   Cash for Junk Cars in <span className="text-brand-yellow">San Antonio, TX</span>
