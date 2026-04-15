@@ -252,7 +252,7 @@ export default function App() {
         <main className="flex-grow bg-[#f4f4f4]">
           {/* --- New Rotating Hero --- */}
           <section 
-            className="relative h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden"
+            className="relative min-h-[600px] md:h-[650px] flex items-center justify-center overflow-hidden pt-20 pb-24 md:pt-0 md:pb-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -289,19 +289,19 @@ export default function App() {
                   We Buy Junk Cars, Trucks & SUVs – Running or Not – Free Pickup
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center w-full max-w-sm sm:max-w-none">
                   <a 
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="bg-brand-red text-white px-10 py-5 rounded-lg font-black text-2xl uppercase btn-shadow border-2 border-red-900 hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
+                    className="bg-brand-red text-white px-6 py-4 md:px-10 md:py-5 rounded-lg font-black text-lg md:text-2xl uppercase btn-shadow border-2 border-red-900 hover:-translate-y-1 transition-transform flex items-center justify-center gap-3 w-full sm:w-auto"
                   >
-                    <Phone size={28} />
+                    <Phone size={24} className="md:w-7 md:h-7" />
                     CALL: {BUSINESS_INFO.phoneFormatted}
                   </a>
                   <a 
                     href={`sms:${BUSINESS_INFO.phone}`}
-                    className="bg-brand-blue text-white px-10 py-5 rounded-lg font-black text-2xl uppercase btn-shadow border-2 border-blue-900 hover:-translate-y-1 transition-transform flex items-center justify-center gap-3"
+                    className="bg-brand-blue text-white px-6 py-4 md:px-10 md:py-5 rounded-lg font-black text-lg md:text-2xl uppercase btn-shadow border-2 border-blue-900 hover:-translate-y-1 transition-transform flex items-center justify-center gap-3 w-full sm:w-auto"
                   >
-                    <MessageSquare size={28} />
+                    <MessageSquare size={24} className="md:w-7 md:h-7" />
                     TEXT FOR OFFER
                   </a>
                 </div>
