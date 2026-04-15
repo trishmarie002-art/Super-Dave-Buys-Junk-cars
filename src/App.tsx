@@ -86,9 +86,22 @@ export default function App() {
     <HelmetProvider>
       <div className="min-h-screen flex flex-col">
         <Helmet>
-          <title>Cash for Junk Cars San Antonio TX | Super Dave Buy’s Junk Cars</title>
-          <meta name="description" content="Sell your junk car fast in San Antonio, TX. Get top cash offers, free pickup, and same-day service. Call Super Dave Buy’s Junk Cars now!" />
+          <title>Super Dave Buy’s Junk Cars | Cash for Junk Cars San Antonio TX</title>
+          <meta name="description" content="Sell your junk car fast in San Antonio, TX. Get top cash offers, free pickup, and same-day service. Call Super Dave Buy’s Junk Cars today!" />
           <meta name="keywords" content={KEYWORDS.join(', ')} />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Super Dave Buy’s Junk Cars – Cash for Junk Cars San Antonio" />
+          <meta property="og:description" content="Get paid cash today for your junk car. Free pickup in San Antonio. Call now!" />
+          <meta property="og:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png" />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Super Dave Buy’s Junk Cars" />
+          <meta name="twitter:description" content="Cash for junk cars in San Antonio – fast & easy" />
+          <meta name="twitter:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png" />
+
           <link rel="preload" as="image" href={heroImages[0].url} />
           <script type="application/ld+json">
             {JSON.stringify(schemaMarkup)}
@@ -184,7 +197,7 @@ export default function App() {
         <main className="flex-grow bg-[#f4f4f4]">
           {/* --- New Rotating Hero --- */}
           <section 
-            className="relative min-h-[650px] md:h-[650px] flex items-center justify-center overflow-hidden pt-24 md:pt-0"
+            className="relative h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -214,14 +227,6 @@ export default function App() {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col items-center"
               >
-                <motion.img 
-                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo1.png"
-                  alt="Super Dave Buy’s Junk Cars San Antonio Logo"
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="h-20 md:h-40 w-auto mb-6 md:mb-8 drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]"
-                />
                 <h1 className="text-4xl md:text-7xl font-black uppercase leading-tight mb-6 drop-shadow-2xl">
                   Cash for Junk Cars in <span className="text-brand-yellow">San Antonio, TX</span>
                 </h1>
