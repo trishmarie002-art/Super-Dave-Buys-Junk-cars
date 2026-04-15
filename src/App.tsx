@@ -120,33 +120,42 @@ export default function App() {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4">
-                <div className="hidden md:block">
+              <div className="flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-6 text-xs font-black uppercase tracking-widest">
+                  <a href="#how-it-works" className="hover:text-brand-yellow transition-colors">How It Works</a>
+                  <a href="#reviews" className="hover:text-brand-yellow transition-colors">Reviews</a>
+                  <a href="#service-areas" className="hover:text-brand-yellow transition-colors">Service Areas</a>
+                  <a href="#faq" className="hover:text-brand-yellow transition-colors">FAQ</a>
+                </nav>
+
+                <div className="flex items-center gap-4">
+                  <div className="hidden md:block">
+                    <a 
+                      href={`tel:${BUSINESS_INFO.phone}`}
+                      className="bg-brand-yellow text-brand-dark px-6 py-2 rounded border-2 border-white font-black text-xl flex items-center gap-2 shadow-md hover:bg-white transition-colors"
+                    >
+                      <Phone size={20} />
+                      {BUSINESS_INFO.phoneFormatted}
+                    </a>
+                  </div>
+                  
+                  {/* Mobile Call Button (Visible only on mobile next to logo) */}
                   <a 
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="bg-brand-yellow text-brand-dark px-6 py-2 rounded border-2 border-white font-black text-xl flex items-center gap-2 shadow-md hover:bg-white transition-colors"
+                    className="md:hidden bg-brand-red text-white px-4 py-2 rounded font-black text-sm flex items-center gap-2 animate-pulse shadow-lg"
                   >
-                    <Phone size={20} />
-                    {BUSINESS_INFO.phoneFormatted}
+                    <Phone size={16} />
+                    CALL
                   </a>
-                </div>
-                
-                {/* Mobile Call Button (Visible only on mobile next to logo) */}
-                <a 
-                  href={`tel:${BUSINESS_INFO.phone}`}
-                  className="md:hidden bg-brand-red text-white px-4 py-2 rounded font-black text-sm flex items-center gap-2 animate-pulse shadow-lg"
-                >
-                  <Phone size={16} />
-                  CALL
-                </a>
 
-                {/* Mobile Menu Toggle */}
-                <button 
-                  className="md:hidden p-2 text-brand-yellow"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                  {isMenuOpen ? <X /> : <Menu />}
-                </button>
+                  {/* Mobile Menu Toggle */}
+                  <button 
+                    className="md:hidden p-2 text-brand-yellow"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    {isMenuOpen ? <X /> : <Menu />}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -246,11 +255,17 @@ export default function App() {
             </div>
           </section>
 
+          {/* --- Main Content Grid --- */}
           <div className="max-w-7xl mx-auto p-4 grid lg:grid-cols-[280px_1fr_280px] gap-4">
             
             {/* --- Left Sidebar --- */}
             <aside className="flex flex-col gap-4">
-              <div className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"
+              >
                 <h3 className="text-sm font-black text-brand-blue uppercase border-b-2 border-brand-yellow pb-1 mb-3">Why Choose Us?</h3>
                 <div className="space-y-2">
                   {[
@@ -266,9 +281,15 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"
+              >
                 <h3 className="text-sm font-black text-brand-blue uppercase border-b-2 border-brand-yellow pb-1 mb-3">Vehicles We Buy</h3>
                 <p className="text-[11px] font-bold mb-2">We buy all types of junk cars in San Antonio, including damaged, totaled, and non-running vehicles:</p>
                 <ul className="text-[11px] space-y-1 ml-4 list-disc font-medium">
@@ -277,13 +298,19 @@ export default function App() {
                   <li>Scrap Vehicles</li>
                   <li>Old Sedans</li>
                 </ul>
-              </div>
+              </motion.div>
 
             </aside>
 
             {/* --- Center Content --- */}
             <div className="flex flex-col gap-4">
-              <section className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+              <motion.section 
+                id="how-it-works"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm"
+              >
                 <h2 className="text-2xl font-black text-brand-blue uppercase mb-4">San Antonio's #1 Junk Car Removal Service</h2>
                 <div className="text-sm leading-relaxed text-slate-600 space-y-4">
                   <p>
@@ -311,10 +338,16 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </motion.section>
 
               {/* --- Google Reviews Section --- */}
-              <section className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+              <motion.section 
+                id="reviews"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm"
+              >
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 border-b border-slate-100 pb-6">
                   <div className="text-center md:text-left">
                     <h2 className="text-2xl font-black text-brand-blue uppercase">What Our Customers Say</h2>
@@ -390,10 +423,16 @@ export default function App() {
                     View All {BUSINESS_INFO.reviewCount} Reviews on Google
                   </a>
                 </div>
-              </section>
+              </motion.section>
 
               {/* --- SEO Content Section (Preserved) --- */}
-              <section className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+              <motion.section 
+                id="faq"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm"
+              >
                 <div className="prose prose-slate max-w-none prose-sm md:prose-base prose-headings:font-black prose-headings:uppercase prose-headings:text-brand-blue">
                   <h2 className="text-2xl font-black mb-6">Ultimate Guide to Selling Your Junk Car in San Antonio, TX</h2>
                   <div className="grid md:grid-cols-2 gap-8">
@@ -425,12 +464,18 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </motion.section>
             </div>
 
             {/* --- Right Sidebar --- */}
             <aside className="flex flex-col gap-4">
-              <div className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm flex-grow">
+              <motion.div 
+                id="service-areas"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm flex-grow"
+              >
                 <h3 className="text-sm font-black text-brand-blue uppercase border-b-2 border-brand-yellow pb-1 mb-3">Service Areas</h3>
                 <p className="text-[11px] mb-3 font-medium">We provide fast junk car removal services throughout San Antonio and nearby cities:</p>
                 <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[10px] font-bold">
@@ -440,24 +485,67 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-brand-blue text-white rounded-lg p-4 text-center shadow-lg border-2 border-brand-yellow">
+              <motion.a 
+                href={`tel:${BUSINESS_INFO.phone}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="bg-brand-blue text-white rounded-lg p-4 text-center shadow-lg border-2 border-brand-yellow block hover:scale-105 transition-transform"
+              >
                 <h4 className="text-lg font-black mb-1 uppercase">SELL TODAY!</h4>
                 <p className="text-[10px] font-medium leading-tight">Turn Your Junk Car Into Cash Today – San Antonio’s #1 Junk Car Buyer</p>
-              </div>
+              </motion.a>
             </aside>
 
           </div>
         </main>
 
         {/* --- Footer --- */}
-        <footer className="bg-brand-dark text-white py-6">
+        <footer className="bg-brand-dark text-white py-12 border-t-8 border-brand-yellow">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-medium">
+            <div className="grid md:grid-cols-3 gap-12 mb-12">
+              <div>
+                <img 
+                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo1.png" 
+                  alt="Super Dave Logo"
+                  className="h-16 w-auto mb-6"
+                />
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  San Antonio's most trusted junk car buyer. We provide fast, honest, and professional junk car removal services with instant cash payments.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="text-brand-yellow font-black uppercase mb-6 tracking-widest">Quick Links</h4>
+                <nav className="flex flex-col gap-4 text-sm font-bold uppercase">
+                  <a href="#how-it-works" className="hover:text-brand-yellow transition-colors">How It Works</a>
+                  <a href="#reviews" className="hover:text-brand-yellow transition-colors">Customer Reviews</a>
+                  <a href="#service-areas" className="hover:text-brand-yellow transition-colors">Service Areas</a>
+                  <a href="#faq" className="hover:text-brand-yellow transition-colors">FAQ</a>
+                </nav>
+              </div>
+
+              <div>
+                <h4 className="text-brand-yellow font-black uppercase mb-6 tracking-widest">Service Areas</h4>
+                <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-bold text-slate-400">
+                  {BUSINESS_INFO.serviceAreas.map((city, i) => (
+                    <div key={i} className="flex items-center gap-1">
+                      <MapPin size={10} className="text-brand-red" /> {city}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium text-slate-500">
               <div>&copy; {new Date().getFullYear()} Super Dave Buy’s Junk Cars - San Antonio, TX</div>
-              <div>Primary Location: San Antonio, TX 78201</div>
-              <div className="text-brand-yellow font-black text-sm">Call {BUSINESS_INFO.phoneFormatted}</div>
+              <div className="flex items-center gap-4">
+                <span>Primary Location: San Antonio, TX 78201</span>
+                <span className="hidden md:inline">|</span>
+                <a href={`tel:${BUSINESS_INFO.phone}`} className="text-brand-yellow font-black text-sm uppercase">Call {BUSINESS_INFO.phoneFormatted}</a>
+              </div>
             </div>
           </div>
         </footer>
