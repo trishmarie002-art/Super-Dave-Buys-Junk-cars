@@ -12,11 +12,33 @@
 
 @layer base {
   body {
-    @apply font-sans text-brand-dark bg-[#f4f4f4];
+    @apply font-sans text-brand-dark bg-[#f4f4f4] overflow-x-hidden;
   }
   
-  h1, h2, h3, h4 {
+  h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    @apply font-sans font-black tracking-tight uppercase leading-[1.1];
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    @apply font-sans font-black tracking-tight uppercase leading-tight;
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     @apply font-sans font-black tracking-tight uppercase;
+  }
+
+  h4 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    @apply font-sans font-black tracking-tight uppercase;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full;
   }
 }
 

@@ -170,7 +170,7 @@ export default function App() {
 
         {/* --- Header --- */}
         <header className="sticky top-0 z-50 bg-brand-blue text-white border-b-5 border-brand-yellow py-3 shadow-lg transition-shadow duration-300">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container-custom">
             <div className="flex justify-between items-center">
               <a href="/" className="flex items-center gap-3 group">
                 <img 
@@ -275,17 +275,17 @@ export default function App() {
             </AnimatePresence>
             <div className="absolute inset-0 bg-brand-dark/60" />
             
-            <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
+            <div className="relative z-10 container-custom text-center text-white">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center max-w-4xl mx-auto"
               >
-                <h1 className="text-4xl md:text-7xl font-black uppercase leading-tight mb-6 drop-shadow-2xl">
+                <h1 className="mb-6 drop-shadow-2xl">
                   Cash for Junk Cars in <span className="text-brand-yellow">San Antonio, TX</span>
                 </h1>
-                <p className="text-xl md:text-3xl font-bold mb-10 text-slate-100 drop-shadow-lg">
+                <p className="text-lg md:text-2xl font-bold mb-10 text-slate-100 drop-shadow-lg max-w-2xl">
                   We Buy Junk Cars, Trucks & SUVs – Running or Not – Free Pickup
                 </p>
                 
@@ -316,10 +316,10 @@ export default function App() {
           </section>
 
           {/* --- Main Content Grid --- */}
-          <div className="max-w-7xl mx-auto p-4 grid lg:grid-cols-[280px_1fr_280px] gap-4">
+          <div className="container-custom py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[280px_1fr_280px] gap-6">
             
             {/* --- Left Sidebar --- */}
-            <aside className="flex flex-col gap-4">
+            <aside className="flex flex-col gap-6 md:col-span-1 lg:col-span-1">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -363,7 +363,7 @@ export default function App() {
             </aside>
 
             {/* --- Center Content --- */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6 md:col-span-2 lg:col-span-1">
               <motion.section 
                 id="how-it-works"
                 initial={{ opacity: 0, y: 20 }}
@@ -371,8 +371,8 @@ export default function App() {
                 viewport={{ once: true }}
                 className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm"
               >
-                <h2 className="text-2xl font-black text-brand-blue uppercase mb-4">San Antonio's #1 Junk Car Removal Service</h2>
-                <div className="text-sm leading-relaxed text-slate-600 space-y-4">
+                <h2 className="text-brand-blue mb-4">San Antonio's #1 Junk Car Removal Service</h2>
+                <div className="text-sm md:text-base leading-relaxed text-slate-600 space-y-4">
                   <p>
                     Looking to sell your junk car in San Antonio, TX? <strong>Super Dave Buy’s Junk Cars</strong> pays top cash for junk cars, trucks, and SUVs. Whether your vehicle is running or not, wrecked, or without a title, we offer fast, free junk car removal across San Antonio and surrounding areas.
                   </p>
@@ -410,7 +410,7 @@ export default function App() {
               >
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 border-b border-slate-100 pb-6">
                   <div className="text-center md:text-left">
-                    <h2 className="text-2xl font-black text-brand-blue uppercase">What Our Customers Say</h2>
+                    <h2 className="text-brand-blue">What Our Customers Say</h2>
                     <p className="text-sm font-bold text-slate-500 uppercase">Real Reviews from San Antonio Residents</p>
                   </div>
                   <div className="flex flex-col items-center md:items-end">
@@ -493,32 +493,32 @@ export default function App() {
                 viewport={{ once: true }}
                 className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm"
               >
-                <div className="prose prose-slate max-w-none prose-sm md:prose-base prose-headings:font-black prose-headings:uppercase prose-headings:text-brand-blue">
-                  <h2 className="text-2xl font-black mb-6">Ultimate Guide to Selling Your Junk Car in San Antonio, TX</h2>
+                <div className="prose prose-slate max-w-none prose-sm md:prose-base prose-headings:text-brand-blue">
+                  <h2 className="mb-6">Ultimate Guide to Selling Your Junk Car in San Antonio, TX</h2>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <p>
                         Are you tired of looking at that old, rusted vehicle taking up space in your driveway? If you've been searching for <strong>cash for junk cars San Antonio</strong>, you've come to the right place. At Super Dave Buy’s Junk Cars, we specialize in helping San Antonio residents turn their unwanted vehicles into immediate cash.
                       </p>
-                      <h3 className="text-lg font-bold mt-6">Why Sell Your Junk Car Now?</h3>
+                      <h3 className="mt-6">Why Sell Your Junk Car Now?</h3>
                       <p>
                         Leaving a junk car on your property isn't just an eyesore—it can also lead to fines from the city of San Antonio or attract unwanted pests. By choosing <strong>junk car removal San Antonio TX</strong> services, you're not only cleaning up your property but also putting money back in your pocket.
                       </p>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold">Frequently Asked Questions</h3>
+                      <h3>Frequently Asked Questions</h3>
                       <div className="space-y-4 mt-4">
                         <div>
-                          <h4 className="font-bold text-sm">How fast can you pick up my car?</h4>
-                          <p className="text-xs">In most cases, we offer same-day or next-day pickup throughout San Antonio and surrounding areas like New Braunfels and Schertz.</p>
+                          <h4 className="text-brand-blue">How fast can you pick up my car?</h4>
+                          <p className="text-xs md:text-sm">In most cases, we offer same-day or next-day pickup throughout San Antonio and surrounding areas like New Braunfels and Schertz.</p>
                         </div>
                         <div>
-                          <h4 className="font-bold text-sm">Do I need to be present?</h4>
-                          <p className="text-xs">Yes, we typically need the owner present to sign the necessary paperwork and receive the cash payment.</p>
+                          <h4 className="text-brand-blue">Do I need to be present?</h4>
+                          <p className="text-xs md:text-sm">Yes, we typically need the owner present to sign the necessary paperwork and receive the cash payment.</p>
                         </div>
                         <div>
-                          <h4 className="font-bold text-sm">No Title?</h4>
-                          <p className="text-xs">While having a title makes the process smoother, Texas law allows for the sale of scrap vehicles under certain conditions. Let us know!</p>
+                          <h4 className="text-brand-blue">No Title?</h4>
+                          <p className="text-xs md:text-sm">While having a title makes the process smoother, Texas law allows for the sale of scrap vehicles under certain conditions. Let us know!</p>
                         </div>
                       </div>
                     </div>
@@ -528,17 +528,17 @@ export default function App() {
             </div>
 
             {/* --- Right Sidebar --- */}
-            <aside className="flex flex-col gap-4">
+            <aside className="flex flex-col gap-6 md:col-span-2 lg:col-span-1">
               <motion.div 
                 id="service-areas"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm flex-grow"
+                className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm flex-grow"
               >
-                <h3 className="text-sm font-black text-brand-blue uppercase border-b-2 border-brand-yellow pb-1 mb-3">Service Areas</h3>
-                <p className="text-[11px] mb-3 font-medium">We provide fast junk car removal services throughout San Antonio and nearby cities:</p>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[10px] font-bold">
+                <h3 className="text-brand-blue border-b-2 border-brand-yellow pb-1 mb-4">Service Areas</h3>
+                <p className="text-xs mb-4 font-medium">We provide fast junk car removal services throughout San Antonio and nearby cities:</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-x-4 gap-y-2 text-[11px] font-bold">
                   {BUSINESS_INFO.serviceAreas.map((city, i) => (
                     <div key={i} className="flex items-center gap-1">
                       <span className="text-brand-red">•</span> {city}
@@ -563,22 +563,22 @@ export default function App() {
         </main>
 
         {/* --- Footer --- */}
-        <footer className="bg-brand-dark text-white py-12 border-t-8 border-brand-yellow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <footer className="bg-brand-dark text-white py-16 border-t-8 border-brand-yellow">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
               <div>
                 <img 
                   src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo1.png" 
                   alt="Super Dave Logo"
                   className="h-16 w-auto mb-6"
                 />
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
                   San Antonio's most trusted junk car buyer. We provide fast, honest, and professional junk car removal services with instant cash payments.
                 </p>
               </div>
               
               <div>
-                <h4 className="text-brand-yellow font-black uppercase mb-6 tracking-widest">Quick Links</h4>
+                <h4 className="text-brand-yellow mb-6 tracking-widest">Quick Links</h4>
                 <nav className="flex flex-col gap-4 text-sm font-bold uppercase">
                   <a href="#how-it-works" className="hover:text-brand-yellow transition-colors">How It Works</a>
                   <a href="#reviews" className="hover:text-brand-yellow transition-colors">Customer Reviews</a>
@@ -588,7 +588,7 @@ export default function App() {
               </div>
 
               <div>
-                <h4 className="text-brand-yellow font-black uppercase mb-6 tracking-widest">Service Areas</h4>
+                <h4 className="text-brand-yellow mb-6 tracking-widest">Service Areas</h4>
                 <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-bold text-slate-400">
                   {BUSINESS_INFO.serviceAreas.map((city, i) => (
                     <div key={i} className="flex items-center gap-1">
