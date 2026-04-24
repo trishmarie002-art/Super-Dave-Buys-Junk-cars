@@ -31,7 +31,7 @@ const schemaMarkup = {
       "@type": "LocalBusiness",
       "@id": "https://super-dave-buys-junk-cars.vercel.app/#business",
       "name": "Super Dave Buys Junk Cars",
-      "image": "https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png",
+      "image": "https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png",
       "url": "https://super-dave-buys-junk-cars.vercel.app/",
       "telephone": "+1-210-994-2827",
       "priceRange": "$$",
@@ -149,13 +149,13 @@ export default function App() {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Super Dave Buy’s Junk Cars – Cash for Junk Cars San Antonio" />
           <meta property="og:description" content="Get paid cash today for your junk car. Free pickup in San Antonio. Call now!" />
-          <meta property="og:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png" />
+          <meta property="og:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" />
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Super Dave Buy’s Junk Cars" />
           <meta name="twitter:description" content="Cash for junk cars in San Antonio – fast & easy" />
-          <meta name="twitter:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo.png" />
+          <meta name="twitter:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" />
 
           <link rel="preload" as="image" href={heroImages[0].url} />
           <script type="application/ld+json">
@@ -174,7 +174,7 @@ export default function App() {
             <div className="flex justify-between items-center">
               <a href="/" className="flex items-center gap-3 group">
                 <img 
-                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo1.png" 
+                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" 
                   alt="Super Dave Buy’s Junk Cars San Antonio Logo"
                   className="h-[45px] md:h-[65px] w-auto drop-shadow-[0_0_8px_rgba(255,215,0,0.3)] group-hover:scale-105 transition-transform"
                 />
@@ -568,7 +568,7 @@ export default function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
               <div>
                 <img 
-                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo1.png" 
+                  src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" 
                   alt="Super Dave Logo"
                   className="h-16 w-auto mb-6"
                 />
