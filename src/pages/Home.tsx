@@ -86,7 +86,7 @@ export default function Home() {
               className="flex flex-col items-center max-w-4xl mx-auto"
             >
               <h1 className="mb-6 drop-shadow-2xl">
-                Cash for Junk Cars in <span className="text-brand-yellow">San Antonio, TX</span>
+                Cash for Junk Cars in <span className="text-brand-yellow">San Antonio TX</span>
               </h1>
               <p className="text-lg md:text-2xl font-bold mb-10 text-slate-100 drop-shadow-lg max-w-2xl">
                 We Buy Junk Cars, Trucks & SUVs – Running or Not – Free Pickup
