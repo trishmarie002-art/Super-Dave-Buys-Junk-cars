@@ -54,8 +54,16 @@ export default function ServiceAreaPage() {
       <Header />
 
       <main className="flex-grow bg-[#f4f4f4]">
-        <section className="bg-brand-blue text-white py-16 md:py-24">
-          <div className="container-custom text-center max-w-4xl mx-auto">
+        <section className="relative text-white py-20 md:py-28 overflow-hidden">
+          <img
+            src="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantonio.webp"
+            alt={`Cash for junk cars in ${area.city}, TX - Super Dave Buys Junk Cars`}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-brand-dark/60" />
+          <div className="relative z-10 container-custom text-center max-w-4xl mx-auto">
             <p className="text-brand-yellow font-black uppercase tracking-widest mb-4">
               Super Dave Buys Junk Cars & Trucks
             </p>
