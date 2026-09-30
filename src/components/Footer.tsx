@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
 import { Link } from 'react-router-dom';
+import { SERVICE_AREAS } from '../data/serviceAreas';
 
 export const Footer: React.FC = () => {
   return (
@@ -33,10 +34,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-brand-yellow mb-6 tracking-widest uppercase">Service Areas</h4>
             <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-bold text-slate-400">
-              {BUSINESS_INFO.serviceAreas.map((city, i) => (
-                <div key={i} className="flex items-center gap-1">
-                  <MapPin size={10} className="text-brand-red" /> {city}
-                </div>
+              {SERVICE_AREAS.map((area) => (
+                <Link key={area.slug} to={`/${area.slug}`} className="flex items-center gap-1 hover:text-brand-yellow transition-colors">
+                  <MapPin size={10} className="text-brand-red" /> {area.city}
+                </Link>
               ))}
             </div>
           </div>
