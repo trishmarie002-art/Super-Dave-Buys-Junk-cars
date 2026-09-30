@@ -25,6 +25,7 @@ export const Footer: React.FC = () => {
             <nav className="flex flex-col gap-4 text-sm font-bold uppercase">
               <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-brand-yellow transition-colors">Home</Link>
               <Link to="/services/sell-my-car-no-title" className="hover:text-brand-yellow transition-colors text-brand-yellow">No Title Guide</Link>
+              <Link to="/blog" className="hover:text-brand-yellow transition-colors">Blog</Link>
               <Link to="/#how-it-works" className="hover:text-brand-yellow transition-colors">How It Works</Link>
               <Link to="/#reviews" className="hover:text-brand-yellow transition-colors">Customer Reviews</Link>
               <Link to="/#faq" className="hover:text-brand-yellow transition-colors">FAQ</Link>
