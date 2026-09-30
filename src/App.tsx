@@ -55,20 +55,20 @@ export default function App() {
         <ScrollToTop />
         <Helmet>
           {/* Surgical Meta Update */}
-          <title>$500+ Cash for Junk Cars & Trucks San Antonio | No Title? No Problem | Call Super Dave for an Instant Quote!</title>
-          <meta name="description" content="Get $500+ cash for junk cars, trucks, and SUVs in San Antonio today! We handle no-title vehicles legally. Same-day pickup and instant quotes. Call Super Dave now!" />
+          <title>Cash for Junk Cars in San Antonio TX</title>
+          <meta name="description" content="Cash for Junk Cars in San Antonio TX. Super Dave buys junk cars, trucks and SUVs with fast cash offers, free towing and same-day pickup available." />
           <meta name="keywords" content={KEYWORDS.join(', ')} />
           
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="$500+ Cash for Junk Cars & Trucks San Antonio | Super Dave" />
-          <meta property="og:description" content="Instant cash for junk vehicles in San Antonio. No title? No problem! Free towing included." />
+          <meta property="og:title" content="Cash for Junk Cars in San Antonio TX" />
+          <meta property="og:description" content="Cash for Junk Cars in San Antonio TX. Fast cash offers, free towing and same-day pickup from Super Dave." />
           <meta property="og:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" />
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Cash for Junk Cars San Antonio | Super Dave" />
-          <meta name="twitter:description" content="$500+ Cash for junk cars in San Antonio - No Title Needed!" />
+          <meta name="twitter:title" content="Cash for Junk Cars in San Antonio TX" />
+          <meta name="twitter:description" content="Cash for Junk Cars in San Antonio TX. Fast cash offers, free towing and same-day pickup." />
           <meta name="twitter:image" content="https://pub-a35884625cfe400d9088764a7f0e49e0.r2.dev/Dave%20Buy's%20Junk%20cars/webuyjunkcarssanantoniologo-removebg-preview.png" />
 
           <script type="application/ld+json">
