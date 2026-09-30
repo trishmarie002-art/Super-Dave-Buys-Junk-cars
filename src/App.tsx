@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import NoTitlePage from './pages/NoTitlePage';
 import ServiceAreaPage from './pages/ServiceAreaPage';
+import Blog from './pages/Blog';
+import BlogPostPage from './pages/BlogPostPage';
 import ScrollToTop from './components/ScrollToTop';
 import { KEYWORDS } from './constants';
 
@@ -79,6 +81,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/sell-my-car-no-title" element={<NoTitlePage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/:slug" element={<ServiceAreaPage />} />
         </Routes>
       </BrowserRouter>
