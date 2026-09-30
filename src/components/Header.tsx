@@ -31,6 +31,7 @@ export const Header: React.FC = () => {
             <nav className="hidden md:flex items-center gap-6 text-xs font-black uppercase tracking-widest">
               <Link to="/#how-it-works" className="hover:text-brand-yellow transition-colors">How It Works</Link>
               <Link to="/services/sell-my-car-no-title" className="hover:text-brand-yellow transition-colors">No Title Help</Link>
+              <Link to="/blog" className="hover:text-brand-yellow transition-colors">Blog</Link>
               <Link to="/#reviews" className="hover:text-brand-yellow transition-colors">Reviews</Link>
               <Link to="/#faq" className="hover:text-brand-yellow transition-colors">FAQ</Link>
             </nav>
@@ -73,6 +74,7 @@ export const Header: React.FC = () => {
         >
           <Link to="/" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }} className="font-bold uppercase">Home</Link>
           <Link to="/services/sell-my-car-no-title" onClick={() => setIsMenuOpen(false)} className="font-bold uppercase">No Title Guide</Link>
+          <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="font-bold uppercase">Blog</Link>
           <Link to="/#how-it-works" onClick={() => setIsMenuOpen(false)} className="font-bold uppercase">How It Works</Link>
           <a 
             href={`tel:${BUSINESS_INFO.phone}`}
